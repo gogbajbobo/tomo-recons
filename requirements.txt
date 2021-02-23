@@ -1,0 +1,11 @@
+jupyterlab
+jupytext
+scikit-image
+numpy
+matplotlib
+# h5py
+# scipy
+# opencv-python
+# scikit-learn
+
+# jupyter labextension install @jupyter-widgets/jupyterlab-manager
