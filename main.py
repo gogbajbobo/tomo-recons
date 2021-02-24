@@ -133,6 +133,8 @@ image[rr, cc] = 0
 rr, cc = disk((shape[0]//2, shape[1]//2+2), 1)
 image[rr, cc] = 0
 recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_images(image[40:61, 40:61], recon_image[61:82, 61:82])
+helper.plot_two_images(image[40:61, 40:61], recon_image_sart[61:82, 61:82])
 helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
 
 # %%
