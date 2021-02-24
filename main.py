@@ -19,20 +19,24 @@
 
 # %%
 import numpy as np
+import matplotlib.pyplot as plt
 from skimage.draw import disk
 import helper
 
 # %%
 shape = (100, 100)
 image = np.zeros(shape)
-helper.process_image(image)
+_, _ = helper.process_image(image)
 
 # %%
 image = np.ones(shape)
 recon_image, recon_image_sart = helper.process_image(image, with_fragment=True)
 
 # %%
-helper.plot_two_images(recon_image[:20, :20], recon_image_sart[:20, :20])
+helper.plot_two_images(recon_image[:60, :20], recon_image_sart[:60, :20])
+
+# %%
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
 
 # %%
 image = np.ones(shape)
@@ -43,7 +47,10 @@ recon_image, recon_image_sart = helper.process_image(image)
 helper.plot_two_images(recon_image[51:147, 51:147], recon_image_sart[51:147, 51:147])
 
 # %%
-helper.plot_two_images(recon_image[:49, :49], recon_image_sart[:49, :49])
+helper.plot_two_images(recon_image[:149, :47], recon_image_sart[:149, :47])
+
+# %%
+helper.plot_two_graphs(recon_image[99, :], recon_image_sart[99, :])
 
 # %%
 image = np.zeros(shape)
@@ -55,6 +62,77 @@ recon_image, recon_image_sart = helper.process_image(image)
 helper.plot_two_images(recon_image[46:96, 46:96], recon_image_sart[46:96, 46:96])
 
 # %%
-helper.plot_two_images(recon_image[:40, :40], recon_image_sart[:40, :40])
+helper.plot_two_images(recon_image[:80, :30], recon_image_sart[:80, :30])
+
+# %%
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 10)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 5)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 2)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 1)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//3), 5)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 5)
+image[rr, cc] = 0
+rr, cc = disk((shape[0]//2, shape[1]//3), 5)
+image[rr, cc] = 0
+rr, cc = disk((shape[0]//2, 2*shape[1]//3), 5)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 5)
+image[rr, cc] = 0
+rr, cc = disk((shape[0]//2, shape[1]//2-10), 5)
+image[rr, cc] = 0
+rr, cc = disk((shape[0]//2, shape[1]//2+10), 5)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
+
+# %%
+image = np.ones(shape)
+rr, cc = disk((shape[0]//2, shape[1]//2), 1)
+image[rr, cc] = 0
+rr, cc = disk((shape[0]//2, shape[1]//2-2), 1)
+image[rr, cc] = 0
+rr, cc = disk((shape[0]//2, shape[1]//2+2), 1)
+image[rr, cc] = 0
+recon_image, recon_image_sart = helper.process_image(image)
+helper.plot_two_graphs(recon_image[71, :], recon_image_sart[71, :])
 
 # %%
