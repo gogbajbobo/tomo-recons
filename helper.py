@@ -39,3 +39,11 @@ def plot_two_images(image0, image1, title0=None, title1=None):
     title1 and axes[1].title.set_text(title1)
     fig.colorbar(im0, ax=axes[0])
     fig.colorbar(im1, ax=axes[1])
+
+
+def plot_two_graphs(x0, x1, title0=None, title1=None):
+    fig, axes = plt.subplots(1, 2, figsize=(20, 5))
+    axes[0].plot(x0)
+    axes[1].plot(x1)
+    title0 and axes[0].title.set_text(title0)
+    title1 and axes[1].title.set_text(title1)
