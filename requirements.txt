@@ -3,6 +3,7 @@ jupytext
 scikit-image
 numpy
 matplotlib
+porespy
 # h5py
 # scipy
 # opencv-python
