@@ -32,8 +32,8 @@ def generate_images(blobiness):
     ax.set_aspect(0.1)
 
     # Сохраняем всё в файлы
-    # https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html?highlight=savetxt#numpy.savetxt
-    # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html?highlight=savefig#matplotlib.pyplot.savefig
+    # https://numpy.org/doc/stable/reference/generated/numpy.savetxt.html
+    # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
     # Под Windows path будет выглядеть как-то так: 'D:\tmp'
 
     path = '/Users/grimax/Desktop/tmp'
